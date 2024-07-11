@@ -1,0 +1,33 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+name = "Form"
+client_id = "2e6ca6aaca784f546bf9105ffe24a0a1"
+application_url = "https://forbidden-noon-priest-contacted.trycloudflare.com"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://forbidden-noon-priest-contacted.trycloudflare.com/auth/callback",
+  "https://forbidden-noon-priest-contacted.trycloudflare.com/auth/shopify/callback",
+  "https://forbidden-noon-priest-contacted.trycloudflare.com/api/auth/callback",
+  "https://forbidden-noon-priest-contacted.trycloudflare.com/.shopify/graphiql/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-07"
+
+[app_proxy]
+url = "https://forbidden-noon-priest-contacted.trycloudflare.com/userdata/userinfo"
+subpath = "proxy"
+prefix = "apps"
+
+[pos]
+embedded = false
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "spin-wheel-game.myshopify.com"
